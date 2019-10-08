@@ -28,6 +28,7 @@ searchBtn.addEventListener('click', () => {
     .then(res => res.json())
     .then(data => data.photos)
     .then(data => {
+      console.log(data);
       let output = '';
       data.forEach(photo => {
         output += `

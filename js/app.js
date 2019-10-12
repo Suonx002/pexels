@@ -24,6 +24,9 @@ searchBtn.addEventListener('click', () => {
             'Search is not in our database. Please try a different search!'
           );
         } else {
+          //clear html
+          gallery.innerHTML = '';
+          
           let output = '';
           data.forEach(photo => {
             output += `

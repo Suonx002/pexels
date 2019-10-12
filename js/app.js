@@ -34,7 +34,7 @@ searchBtn.addEventListener('click', () => {
         output += `
         <div class="gallery-item">
           <img
-            src="${photo.src.medium}"
+            src="${photo.src.original}"
           />
           <p><strong>Photographer: </strong> ${photo.photographer}</p>
           <a href="${photo.photographer_url}" target="_blank" class="learn-more">View More By ${photo.photographer}</a>
@@ -42,6 +42,7 @@ searchBtn.addEventListener('click', () => {
         `;
       });
       gallery.insertAdjacentHTML('beforeend', output);
+      console.log(data);
     })
     .catch(err => {
       console.log(err);
